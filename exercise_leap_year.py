@@ -18,3 +18,17 @@ def leap_year():
         El año 1700 no es bisiesto
     """
     pass
+
+    year = int(input())
+
+    divisible = year % 4
+    divisible2 = year % 100
+    divisible3 = year % 400
+
+    if divisible == 0:
+        if divisible2 != 0 or divisible3 == 0:
+            print(f"El año {year} es bisiesto")
+        else:
+            print(f"El año {year} no es bisiesto")
+    else:
+        print(f"El año {year} no es bisiesto")
